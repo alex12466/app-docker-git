@@ -6,5 +6,7 @@ print(content)
 text_fara_spatii = re.sub(r'\s+' , ' ',file)
 
 text_fara_punctuatie = re.sub(r'[^\w\s]', '',text_fara_spatii)
-print("Text fara punctuatie : " , text_fara_punctuatie)
+text_lower = text_fara_punctuatie.lower()
+cuvinte_filtrate = " ".join([w for w in text_lower.split() if len(w) > 3])
+print("Rezultat final : " , cuvinte_filtrate)
 
